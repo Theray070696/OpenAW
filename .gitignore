@@ -68,3 +68,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# AW Ripped Assets (Used for dev, not legally allowed to include)
+
+/[Aa]ssets/[Ss]prites/AWSprites.meta
+/[Aa]ssets/[Ss]prites/AWSprites/*
