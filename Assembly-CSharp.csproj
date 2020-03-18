@@ -64,7 +64,9 @@
     <Compile Include="Assets\Scripts\Scriptable Objects\Terrain.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Unit.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Weapon.cs" />
+    <Compile Include="Assets\Scripts\TerrainComponent.cs" />
     <Compile Include="Assets\Scripts\UnitType.cs" />
+    <Compile Include="Assets\Scripts\World.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Theray070696/Documents/New Unity Projects2/OpenAW/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Road
   Defense: 0
+  Funds: 0
+  RepairType: 0
   MoveCosts:
   - MoveType: 0
     Cost: 1
@@ -25,3 +27,4 @@ MonoBehaviour:
     Cost: 1
   - MoveType: 4
     Cost: 1
+  HasConnectedTextures: 1
