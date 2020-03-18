@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c589c4b1c88bb4c4382fb0bff8050fac, type: 3}
+  m_Name: Neotank
+  m_EditorClassIdentifier: 
+  Name: Neotank
+  Weapons:
+  - {fileID: 11400000, guid: 8c3bfad7c99097f498ffec45d721aedb, type: 2}
+  - {fileID: 11400000, guid: 7ffb722f019a31b4b80aa75253ebceb3, type: 2}
+  BaseCost: 22000
+  MoveRange: 6
+  MovementType: 3
+  Fuel: 99
+  Vision: 1
