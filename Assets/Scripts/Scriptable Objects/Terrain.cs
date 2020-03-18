@@ -12,7 +12,7 @@ public class Terrain : ScriptableObject
     public List<MoveCost> MoveCosts;
     public bool HasConnectedTextures;
 
-    [Tooltip("Sprite 0 is assumed to be default sprite. Everything after should be used for connected textures")]
+    [Tooltip("Sprite 0 is assumed to be default sprite. Everything after should be used for connected textures or alternate sprites (ie an owned city)")]
     public List<Sprite> Sprites;
 
     public Sprite GetSpriteFromName(string name = "")

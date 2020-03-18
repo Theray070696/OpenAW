@@ -28,3 +28,19 @@ MonoBehaviour:
   - MoveType: 4
     Cost: 1
   HasConnectedTextures: 1
+  Sprites:
+  - {fileID: -5500276736981312093, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: 302484694144592282, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -8500111489149446252, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -3963954151301736442, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -711730180647187174, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: 2409624720424884428, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -8459017876724887413, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: 7253110052508238367, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -3501658787127638669, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -4591468257578493440, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -4539682387859890846, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -2668106248683810199, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: 6545528857177130210, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -4857097481471681895, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -7755730748868452532, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class TerrainComponent : MonoBehaviour
@@ -24,10 +25,14 @@ public class TerrainComponent : MonoBehaviour
             if(value != _terrain)
             {
                 _terrain = value;
-                UpdateSprite();
-                if(cbTerrainChanged != null)
+
+                if(!World.INSTANCE.Generating)
                 {
-                    cbTerrainChanged(this);
+                    UpdateSprite();
+                    if(cbTerrainChanged != null)
+                    {
+                        cbTerrainChanged(this);
+                    }
                 }
             }
         }
@@ -49,40 +54,39 @@ public class TerrainComponent : MonoBehaviour
             return;
         }
 
-        string spriteName = terrain.GetSpriteFromName().name;
+        StringBuilder spriteName = new StringBuilder(terrain.name).Append("_");
 
         World world = World.INSTANCE;
         
-        TerrainComponent t;
-        t = world.GetTerrainAt(x, y + 1);
+        TerrainComponent t = world.GetTerrainAt(x, y + 1);
 
-        if(t != null && t.terrain == this.terrain)
+        if(t != null && t.terrain.name.Equals(this.terrain.name))
         {
-            spriteName += "N";
+            spriteName.Append("N");
         }
 
         t = world.GetTerrainAt(x + 1, y);
 
-        if(t != null && t.terrain == this.terrain)
+        if(t != null && t.terrain.name.Equals(this.terrain.name))
         {
-            spriteName += "E";
+            spriteName.Append("E");
         }
 
         t = world.GetTerrainAt(x, y - 1);
 
-        if(t != null && t.terrain == this.terrain)
+        if(t != null && t.terrain.name.Equals(this.terrain.name))
         {
-            spriteName += "S";
+            spriteName.Append("S");
         }
 
         t = world.GetTerrainAt(x - 1, y);
 
-        if(t != null && t.terrain == this.terrain)
+        if(t != null && t.terrain.name.Equals(this.terrain.name))
         {
-            spriteName += "W";
+            spriteName.Append("W");
         }
         
-        spriteRenderer.sprite = terrain.GetSpriteFromName(spriteName);
+        spriteRenderer.sprite = terrain.GetSpriteFromName(spriteName.ToString());
     }
     
     public void RegisterTerrainChangedCallback(Action<TerrainComponent> callback)

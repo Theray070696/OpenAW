@@ -15,6 +15,7 @@ MonoBehaviour:
   Name: City
   Defense: 3
   Funds: 1000
+  RepairType: 0
   MoveCosts:
   - MoveType: 0
     Cost: 1
@@ -26,3 +27,17 @@ MonoBehaviour:
     Cost: 1
   - MoveType: 4
     Cost: 1
+  HasConnectedTextures: 0
+  Sprites:
+  - {fileID: -6676908842158489180, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: 620450297655540268, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -1640957995871846117, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: 4435238666582476630, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: 729717733568682128, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: 955579361148280489, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -8686201700053683986, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: 4897062338980913754, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -6527799002692849041, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: 953262977603626225, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: 2355996733521132950, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
+  - {fileID: -2789346499813184834, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}

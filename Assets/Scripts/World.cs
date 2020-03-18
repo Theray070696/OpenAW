@@ -3,12 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using System.Text;
+using Random = System.Random;
 
 public class World : MonoBehaviour
 {
     public List<Terrain> Terrains;
     public GameObject TerrainGameObjectPrefab;
     public Camera C;
+
+    [NonSerialized]
+    public bool Generating = false;
 
     public static World INSTANCE;
     
@@ -45,6 +49,8 @@ public class World : MonoBehaviour
 
     public void CreateWorldOfSize(int width = 100, int height = 100)
     {
+        Generating = true;
+        
         this.Width = width;
         this.Height = height;
 
@@ -58,12 +64,29 @@ public class World : MonoBehaviour
                 
                 TC.transform.position = new Vector3(x, y, 0f);
                 TC.gameObject.name = new StringBuilder("Tile_").Append(x).Append("_").Append(y).ToString();
-
+                TC.x = x;
+                TC.y = y;
+                
                 terrainXY[x, y] = TC;
                 
                 terrainXY[x, y].RegisterTerrainChangedCallback(OnTerrainChanged);
-                terrainXY[x, y].terrain = Terrains[0];
+
+                // Temp code to make sure connected textures properly function
+                if(UnityEngine.Random.Range(0, 10) == 0)
+                {
+                    terrainXY[x, y].terrain = Terrains[0];
+                } else
+                {
+                    terrainXY[x, y].terrain = Terrains[1];
+                }
             }
+        }
+
+        Generating = false;
+
+        foreach(TerrainComponent TC in terrainXY)
+        {
+            TC.UpdateSprite();
         }
 
         Debug.Log("World created with " + Width * Height + " tiles.");
@@ -86,7 +109,7 @@ public class World : MonoBehaviour
     {
         if(x < 0 || x >= Width || y < 0 || y >= Height)
         {
-            Debug.Log("Tile at coordinates (" + x + ", " + y + ") is null!");
+            //Debug.Log("Tile at coordinates (" + x + ", " + y + ") is null!");
             return null;
         }
 

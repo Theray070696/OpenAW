@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Plain
   Defense: 1
+  Funds: 0
+  RepairType: 0
   MoveCosts:
   - MoveType: 0
     Cost: 1
@@ -25,3 +27,6 @@ MonoBehaviour:
     Cost: 1
   - MoveType: 4
     Cost: 1
+  HasConnectedTextures: 0
+  Sprites:
+  - {fileID: 5395836125996640265, guid: 7e17aad02b56f074aa3af8904d5e353f, type: 3}
